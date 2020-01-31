@@ -2,8 +2,8 @@
 
 module.exports.hello = async event => {
   let name = "World";
-  if (event.queryStringParameters && queryStringParameters.name) {
-    name = queryStringParameters.name;
+  if (event.queryStringParameters && event.queryStringParameters.name) {
+    name = event.queryStringParameters.name;
   }
   return {
     statusCode: 200,
